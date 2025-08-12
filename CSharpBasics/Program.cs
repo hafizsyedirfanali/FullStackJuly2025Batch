@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//Executable area
+using CSharpBasics;
+
+T01_DataTypes.Test();
