@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.vs/FullStackJuly2025Batch/v17/.suo
+/.vs/FullStackJuly2025Batch/v17/DocumentLayout.json
+/CSharpBasics/obj/Debug/net8.0/CSharpBasics.AssemblyInfo.cs
+/CSharpBasics/obj/Debug/net8.0/CSharpBasics.AssemblyInfoInputs.cache
