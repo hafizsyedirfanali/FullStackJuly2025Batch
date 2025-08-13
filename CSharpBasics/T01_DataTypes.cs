@@ -1,12 +1,11 @@
-﻿using System.Numerics;
-
+﻿
 namespace CSharpBasics;
 
 public class T01_DataTypes
 {
     public static void Test()
     {
-        //number are classifed into integers (-100, 0, 200) and real (1.2, -100.33)
+        //number are classified into integers (-100, 0, 200) and real (1.2, -100.33)
         //1. Integer - Decimal let no of bits be n (2^n)
         //   0           0
         //   1           1
@@ -39,8 +38,29 @@ public class T01_DataTypes
         long l = 1;
         Int64 i64 = 1;
         ulong lu = 1;
+        UInt64 ui64 = 1;
 
         Int128 b = 1;
         UInt128 ub = 1;
+
+
+        //Real numbers (floating numbers) 1.1, 2.5, -1.4
+        float f = 1.1f; //4 Bytes (least accuracy)
+        Single s = 1.1f;
+
+        double d = 1.1d; //8 Bytes (average accuracy)
+        Double d1 = 1.1d;
+
+        decimal dm = 1.1m; //16 Bytes (highest accuracy)
+        Decimal dm1 = 1.1m;//For amount/currency always use decimal
+
+        bool bl = true;
+        Boolean bl1 = true;
+
+        char c = 'a';
+
+        string str = "hello";
+        //integer(5), float(3), boolean, char, string (BASIC TYPES)
+        //ADVANCE TYPES: 
     }
 }
