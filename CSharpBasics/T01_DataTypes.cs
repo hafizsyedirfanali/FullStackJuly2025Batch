@@ -1,6 +1,10 @@
 ﻿
 namespace CSharpBasics;
-
+/// <summary>
+/// Data Types are of two types.
+/// 1. Valued type -> stored in stack (Limited) FILO (Push and Pop)
+/// 2. Referenced type -> stored in heap (Lot of space available)
+/// </summary>
 public class T01_DataTypes
 {
     public static void Test()
@@ -26,11 +30,11 @@ public class T01_DataTypes
         //4. long  - 64 bits - 8 bytes 18446744073709551616
         //5. big int- 128 bits-16 bytes ----
         // -10 -9 -8 -- ------ -1 0 1 2 3 ---------10- - - - -255
-        byte bunsigned = 255;
-        sbyte bsigned = -128;
+        byte bunsigned = 255;//pushed in stack
+        sbyte bsigned = -128;//pushed in stack
 
-        short ssigned = -32768;
-        ushort sunsigned = 65535;
+        short ssigned = -32768;//pushed in stack
+        ushort sunsigned = 65535;//pushed in stack
 
         uint intUnsigned = 4294967295;
         int intSigned = -2147483648;
@@ -62,5 +66,7 @@ public class T01_DataTypes
         string str = "hello";
         //integer(5), float(3), boolean, char, string (BASIC TYPES)
         //ADVANCE TYPES: 
-    }
+
+
+    }//at the end of scope all the stack variables are popped automatically.
 }
