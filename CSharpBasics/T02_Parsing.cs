@@ -77,7 +77,7 @@ public class T02_Parsing
     }
     public static void ExplicitUsingTryParse()
     {
-        string s = "a1";
+        string s = "1.1";
         bool isSucceeded = int.TryParse(s, out int i);
         if(isSucceeded == true)
         {
