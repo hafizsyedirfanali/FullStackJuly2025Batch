@@ -16,7 +16,7 @@ public class T03_Operators
 {
     public static void Test()
     {
-        Bitwise();
+        IncrementDecrementOperators();
     }
     public static void ArithmeticOperators()
     {
@@ -27,6 +27,33 @@ public class T03_Operators
         int divisionQuotient = a / b;
         int divisionRemainder = a % b;
         int exponent = a ^ b;//a to the power b
+    }
+    public static void IncrementDecrementOperators()
+    {
+        //increment and decrement operators are unary operators
+        int i = 10;
+        //increment
+        i++;//post increment - returns value before incrementing
+        ++i;//pre increment - returns value after incrementing
+        int a = 10, b = 20, result;
+        result = a + b++;//post increment - b is incremented after this line
+        Console.WriteLine(result);//30
+        Console.WriteLine(b);//21
+        //pre increment
+        result = ++a + b;//pre increment - a is incremented before this line
+        Console.WriteLine(result);//32
+        Console.WriteLine(a);//11
+        //decrement
+        i--;//post decrement - returns value before decrementing
+        --i;//pre decrement - returns value after decrementing
+        //post decrement
+        result = a + b--;//post decrement - b is decremented after this line
+        Console.WriteLine(result);//32
+        Console.WriteLine(b);//20
+        //pre decrement
+        result = --a + b;//pre decrement - a is decremented before this line
+        Console.WriteLine("value in result: " + result);//31
+        Console.WriteLine("value in a: "+a);//10
     }
     public static void ComparisonOperator()
     {
