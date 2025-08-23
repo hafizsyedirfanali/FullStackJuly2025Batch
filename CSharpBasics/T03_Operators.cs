@@ -2,7 +2,7 @@
 /// <summary>
 /// Its a type safe language.
 /// In c# we have
-/// 1. Arithmetic operators
+/// 1. Arithmetic operators, increment and decrement
 /// 2. Equality or Comparison Operators
 /// 3. Logical Operators
 /// 4. Bitwise Operator
@@ -16,7 +16,22 @@ public class T03_Operators
 {
     public static void Test()
     {
-        Bitwise();
+        NullConditionalOperator();
+    }
+    public static void NullConditionalOperator()
+    {
+        string? inputText = null;
+
+        string outputText = inputText ?? "NIL";
+        string outputText1 = inputText!;
+        Console.WriteLine(outputText);
+    }
+
+    public static void NullForgivingOperator()
+    {
+        string input = Console.ReadLine()!;//here exclamation mark is a null forgiving operator.
+        //it is used to hide the warning.
+        //use it only when you are sure that null is not coming.
     }
     public static void ArithmeticOperators()
     {
