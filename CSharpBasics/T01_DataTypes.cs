@@ -11,6 +11,7 @@ public class T01_DataTypes
     {
         //number are classified into integers (-100, 0, 200) and real (1.2, -100.33)
         //1. Integer - Decimal let no of bits be n (2^n)
+        //default value of integer is 0
         //   0           0
         //   1           1
         //   2          10
@@ -49,6 +50,7 @@ public class T01_DataTypes
 
 
         //Real numbers (floating numbers) 1.1, 2.5, -1.4
+        //default value of real number is 0.0
         float f = 1.1f; //4 Bytes (least accuracy)
         Single s = 1.1f;
 
@@ -59,14 +61,33 @@ public class T01_DataTypes
         Decimal dm1 = 1.1m;//For amount/currency always use decimal
 
         bool bl = true;
-        Boolean bl1 = true;
+        Boolean bl1 = true;//default value is false.i.e. 0
 
-        char c = 'a';
+        char c = 'a';//ascii value 97, in bits 01100001
+        //default value is '\0' i.e. 0
 
-        string str = "hello";
+        string str = "hello";//string is a reference type, it is stored in heap memory.
         //integer(5), float(3), boolean, char, string (BASIC TYPES)
         //ADVANCE TYPES: 
 
 
     }//at the end of scope all the stack variables are popped automatically.
+    public static void NullableValuedTypes()
+    {
+        byte? b = null;// Nullable type, can hold null value
+        sbyte? bs = null; // Nullable type, can hold null value
+        short? ss = null; // Nullable type, can hold null value
+        ushort? sus = null; // Nullable type, can hold null value
+        float? fNullable = null; // Nullable type, can hold null value
+        bool? blNullable = null; // Nullable type, can hold null value
+        char? cNullable = null; // Nullable type, can hold null value
+    }
+    public static void NullableReferenceTypes()
+    {
+        //in older versions, all reference types are nullable by default.
+        //in newer versions, reference types are non-nullable by default.
+        string s = null;//not showing error because it is maintaining compatibility with older versions of C#.
+        string? s1 = null;
+        //other reference types like class, interface, delegate, array, etc. are also nullable by default.
+    }
 }

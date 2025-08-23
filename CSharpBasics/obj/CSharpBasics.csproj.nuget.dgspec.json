@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Source\\Repos\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj": {}
+    "C:\\Users\\syedi\\source\\repos\\hafizsyedirfanali\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Source\\Repos\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj": {
+    "C:\\Users\\syedi\\source\\repos\\hafizsyedirfanali\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
+        "projectUniqueName": "C:\\Users\\syedi\\source\\repos\\hafizsyedirfanali\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
         "projectName": "CSharpBasics",
-        "projectPath": "C:\\Users\\User\\Source\\Repos\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Source\\Repos\\FullStackJuly2025Batch\\CSharpBasics\\obj\\",
+        "projectPath": "C:\\Users\\syedi\\source\\repos\\hafizsyedirfanali\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
+        "packagesPath": "C:\\Users\\syedi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\syedi\\source\\repos\\hafizsyedirfanali\\FullStackJuly2025Batch\\CSharpBasics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\syedi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
