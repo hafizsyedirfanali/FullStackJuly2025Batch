@@ -1,4 +1,4 @@
 ﻿//Executable area
 using CSharpBasics;
 
-T05_StringManipulation.Test();
+T06_Loops.Test();
