@@ -90,4 +90,46 @@ public class T01_DataTypes
         string? s1 = null;
         //other reference types like class, interface, delegate, array, etc. are also nullable by default.
     }
+    public static void VarKeyword()
+    {
+        //var keyword is used to declare a variable without specifying its type.
+        //the type is identified by the compiler at compile time.
+        //it is a shortcut for declaring a variable.
+        var i = 10; //int
+        //i = "hello"; //error since i is identified as int.
+        var d = 10.5d; //double
+        var s = "hello"; //string
+        var bl = true; //bool
+        var c = 'a'; //char
+        var f = 10.5f; //float
+        var dm = 10.5m; //decimal
+    }
+    public static object ASource()
+    {
+        return 10; //int
+    }
+    public static void DynamicType()
+    {
+        //it is used when data is unknown at compile time.
+        //it is not checked at compile time, it is identified at runtime.
+        dynamic d = ASource(); //int
+        d = "hello"; //string
+        decimal dm = d;//if d contains string, then it will throw exception.
+        d = true; //bool
+        d = 10.5f; //float
+        d = 10.5m; //decimal
+    }
+    public static void ObjectType()
+    {
+        //it is the base type of all types in C#.
+        //it can hold any type of value.
+        //explicit casting is required to convert it to its original type.
+        object o = ASource(); //int
+        int i = (int) o;//unboxing with explicit casting
+        o = "hello"; //string
+        o = true; //bool
+        o = 10.5f; //float
+        o = 10.5m; //decimal
+
+    }
 }

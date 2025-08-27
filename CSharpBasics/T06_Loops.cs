@@ -12,7 +12,7 @@ public class T06_Loops
     
      public static void ForEachLoop(){
         int[] array = new int[] {1,2,3,4,5,6,7};//size = 7
-        foreach(int i in array){
+        foreach(var i in array){
             Console.WriteLine("Array Foreach - "+i);
         }
     }
