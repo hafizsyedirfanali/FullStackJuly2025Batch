@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj": {}
+    "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj": {}
   },
   "projects": {
-    "e:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj": {
+    "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
+        "projectUniqueName": "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
         "projectName": "CSharpBasics",
-        "projectPath": "e:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
+        "projectPath": "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
         "packagesPath": "C:\\Users\\Syed Sabir Ali\\.nuget\\packages\\",
-        "outputPath": "e:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\obj\\",
+        "outputPath": "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Syed Sabir Ali\\AppData\\Roaming\\NuGet\\NuGet.Config"
