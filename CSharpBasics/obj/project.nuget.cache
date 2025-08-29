@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V3UPqvoFxGs=",
+  "dgSpecHash": "s/SI9zKI250=",
   "success": true,
-  "projectFilePath": "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Syed Sabir Ali\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.19\\microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
-    "C:\\Users\\Syed Sabir Ali\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.19\\microsoft.windowsdesktop.app.ref.8.0.19.nupkg.sha512",
-    "C:\\Users\\Syed Sabir Ali\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.19\\microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512",
-    "C:\\Users\\Syed Sabir Ali\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.19\\microsoft.netcore.app.host.win-x64.8.0.19.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\FSD\\.Net\\CSharpBasics\\CSharpBasics.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

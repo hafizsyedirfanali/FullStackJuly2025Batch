@@ -131,5 +131,28 @@ public class T08_Arrays
         // and so on...
 
         //2. Jagged Array: Array of different size of arrays
+        int[][] jaggedArray = new int[3][];
+        int[] array1 = [1, 2, 3, 4];//size = 4
+        int[] array2 = new int[3] {1,2,3};//size = 3
+        int[] array3 = [1, 2, 3, 4, 5];//size = 5
+        jaggedArray[0] = array1;
+        jaggedArray[1] = array2;
+        jaggedArray[2] = array3;
+        int[][] jaggedArray1 =
+        {
+            new int[2]{1,2 },
+            new int[4]{2,3,4,5 },
+            new int[3]{ 4,5,6}
+        };
+        int[][] jaggedArray2 =
+        {
+            [1,2],
+            [2,3,4,5],
+            [3,4,5]
+        };
+        jaggedArray[0][0] = 1;
+        jaggedArray[0][1] = 2;
+
+        int[][][] jagged3D = new int[2][][];
     }
 }

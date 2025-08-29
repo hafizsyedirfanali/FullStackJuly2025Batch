@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj": {}
+    "D:\\FSD\\.Net\\CSharpBasics\\CSharpBasics.csproj": {}
   },
   "projects": {
-    "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj": {
+    "D:\\FSD\\.Net\\CSharpBasics\\CSharpBasics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
+        "projectUniqueName": "D:\\FSD\\.Net\\CSharpBasics\\CSharpBasics.csproj",
         "projectName": "CSharpBasics",
-        "projectPath": "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\CSharpBasics.csproj",
-        "packagesPath": "C:\\Users\\Syed Sabir Ali\\.nuget\\packages\\",
-        "outputPath": "E:\\Repositories\\FullStackJuly2025Batch\\CSharpBasics\\obj\\",
+        "projectPath": "D:\\FSD\\.Net\\CSharpBasics\\CSharpBasics.csproj",
+        "packagesPath": "C:\\Users\\Noor\\.nuget\\packages\\",
+        "outputPath": "D:\\FSD\\.Net\\CSharpBasics\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Syed Sabir Ali\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Noor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,24 +60,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.19, 8.0.19]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
