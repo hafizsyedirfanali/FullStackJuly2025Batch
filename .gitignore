@@ -368,3 +368,5 @@ FodyWeavers.xsd
 /.vs/VSWorkspaceState.json
 /.vs/FullStackJuly2025Batch/v17/.futdcache.v2
 /.vs/FullStackJuly2025Batch/v17/DocumentLayout.backup.json
+/.vs/FullStackJuly2025Batch/DesignTimeBuild/.dtbcache.v2
+/.vs/slnx.sqlite
