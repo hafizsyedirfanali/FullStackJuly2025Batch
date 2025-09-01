@@ -1,6 +1,6 @@
 ﻿namespace CSharpBasics;
 /// <summary>
-/// Parsing in c# is classified in two types
+/// Parsing/casting in c# is classified in two types
 /// 1. Implicit - automatic 
 /// 2. Explicit - manual
 /// </summary>
