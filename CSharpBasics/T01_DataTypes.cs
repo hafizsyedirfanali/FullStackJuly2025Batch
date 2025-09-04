@@ -3,7 +3,7 @@ namespace CSharpBasics;
 /// <summary>
 /// Data Types are of two types.
 /// 1. Valued type -> stored in stack (Limited) FILO (Push and Pop)
-/// 2. Referenced type -> stored in heap (Lot of space available)
+/// 2. Referenced type -> stored in heap (Lot of space available), array, string, object, class instance
 /// </summary>
 public class T01_DataTypes
 {

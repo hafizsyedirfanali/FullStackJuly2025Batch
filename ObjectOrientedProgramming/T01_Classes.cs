@@ -1,5 +1,6 @@
 ﻿namespace ObjectOrientedProgramming;
 /// <summary>
+/// A class is a blueprint.
 /// A class is a collection of class members like
 /// 1. Properties
 /// 2. Fields - Fields are private variables. Used to store local data.
