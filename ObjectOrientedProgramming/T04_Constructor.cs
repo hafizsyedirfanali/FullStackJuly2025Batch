@@ -39,9 +39,9 @@ public class T04_Constructor
             this.a = a;
             Console.WriteLine("Parameterized Constructor with int parameter");
         }
-        public ConstructorOverloading(string b)
+        public ConstructorOverloading(string s)
         {
-            this.s = b;
+            this.s = s;
             Console.WriteLine("Parameterized Constructor with string parameter");
         }
         public ConstructorOverloading(int a, string s)

@@ -53,4 +53,19 @@ public class T05_StringManipulation
         bool isEqual = emailEntered.ToUpper() == emailStored.ToUpper();
         bool isEqual1 = emailStored.Equals(emailEntered,StringComparison.OrdinalIgnoreCase);
     }
+    public static void Concatenation()
+    {
+        string firstName = "John";
+        string lastName = "Doe";
+        //using + operator
+        string fullName = firstName + " " + lastName;
+        //using string.Concat method (advance)
+        string fullName1 = string.Concat(firstName, " ", lastName);
+        //using string interpolation (best way)
+        string fullName2 = $"{firstName} {lastName}";
+        //using string.Format method (advance)
+        string fullName3 = string.Format("{0} {1}", firstName, lastName);
+        //using placeholder in WriteLine
+        Console.WriteLine("Full Name is {0} {1}", firstName, lastName);
+    }
 }
