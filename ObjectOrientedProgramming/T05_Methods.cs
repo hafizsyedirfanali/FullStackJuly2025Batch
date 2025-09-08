@@ -8,6 +8,8 @@ public class T05_Methods
     {
         //Test holds the memory address of the method, it is like a pointer to the method
         Console.WriteLine("Hello from Test method in T05_Method class");
+
+        CallingMethod();
     }
 
     //parameterless method that returns nothing (void)
@@ -57,5 +59,62 @@ public class T05_Methods
         Console.WriteLine(Add(10, 20, 30));//calls Add(int, int, int)
         Console.WriteLine(Add(10.5, 20.5));//calls Add(double, double)
         Console.WriteLine(Add("Hello ", "World"));//calls Add(string, string)
+    }
+
+    ///calling a function
+    //Call by value and call by reference
+    //CALL BY VALUE: Calling a method by passing a value as a parameter
+    public void CallingMethod()
+    {
+        int num1 = 10;
+        //call by value
+        num1 = Increment(num1);//old value is overwritten;
+
+        //call by reference using ref
+        int num2 = 10;
+        IncrementByRef(ref num2);
+
+        int a = 10, b = 20;
+        PrintSum(in a, in b);
+
+        int c;
+        ConvertToInt("10", out c);
+
+        ConvertToInt("10", out int d);
+    }
+    public int Increment(int a)//a = 10; this is a copy of num1
+    {
+        a = a + 1;//10 -> 11
+        return a; //11
+    }
+
+    //call by reference: using in, out and ref keywords.
+    public void IncrementByRef(ref int a)//it is expecting address/reference
+    {
+        a = a + 1;
+    }
+    public void PrintSum(in int a, in int b)
+    {
+        //a = a + 1;//Modifications not allowed as it is readonly variable
+        Console.WriteLine($"Sum is {a + b}");
+    }
+
+    public void ConvertToInt(string num, out int result)
+    {
+        //adding or updating value into out type variable is mandatory/compulsory.
+        result = int.Parse(num);
+    }
+    public bool MyTryParse(string s, out int result)
+    {
+        try
+        {
+            result = int.Parse(s);
+            return true;
+        }
+        catch
+        {
+            result = 0;
+            return false;
+        }
     }
 }
