@@ -55,18 +55,18 @@ public class T06_Delegates
     }
     public void F1(string s) 
     {
-        Console.WriteLine("From F1");
+        Console.WriteLine("From F1 " + s);
     }
     public void F2(string s)
     {
-        Console.WriteLine("From F2");
+        Console.WriteLine("From F2 " + s);
     }
     public void F3(string s)
     {
-        Console.WriteLine("From F3");
+        Console.WriteLine("From F3 " + s);
     }
     public void F4(string s)
     {
-        Console.WriteLine("From F4");
+        Console.WriteLine("From F4 " + s);
     }
 }
