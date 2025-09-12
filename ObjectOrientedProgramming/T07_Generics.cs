@@ -10,6 +10,7 @@ public class T07_Generics
     public delegate void AGenericDelegate<T1,T2>(T1 arg1, T2 arg2);
     public delegate void AGenericDelegate<T1,T2,T3>(T1 arg1, T2 arg2,T3 arg3);
     public delegate T4 AGenericDelegate<T1,T2,T3, T4>(T1 arg1, T2 arg2,T3 arg3);
+    public delegate TResult AGenericDelegate<out TResult, in T1, in T2, in T3, in T4, in T5>(T1 arg1, T2 arg2,T3 arg3, T4 arg4, T5 arg5);
     public void Test()
     {
         var obj = new AClass<int>();
@@ -28,11 +29,12 @@ public class T07_Generics
         AGenericDelegate<int> d1 = F1;
         AGenericDelegate<string> d2 = F2;
         AGenericDelegate<int,int> d3 = F3;
-
+        AGenericDelegate<string, int, int, int, int, int> d4 = F4;
     }
     public void F1(int a) { }
     public void F2(string a) { }
     public void F3(int a, int b) { }
+    public string F4(int a, int b, int c, int d, int e) { return string.Empty; }
     public class AClass<T>
     {
         public T MyProperty { get; set; }
