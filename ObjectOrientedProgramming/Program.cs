@@ -1,4 +1,4 @@
 ﻿using ObjectOrientedProgramming;
 
-var obj = new T05_Methods();
+var obj = new T06_Delegates();
 obj.Test();
