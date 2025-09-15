@@ -52,3 +52,33 @@ public class T01_Classes
         //cleanup code
     }
 }
+public class TestClass
+{
+    public void Test()
+    {
+        T01_Classes obj1 = new T01_Classes();//goes in heap
+        obj1.Display();
+        MyStruct obj2 = new MyStruct();//goes in stack
+        obj2.Display();
+    }
+}
+public struct MyStruct
+{
+    //it can have a constructor, a method, a class,
+    //a field, a property
+    //it does not have a destructor - Valued Type (Stack)
+    public MyStruct()
+    {
+        
+    }
+    private int id;
+    public int MyProperty { get; set; }
+    public void Display()
+    {
+        Console.WriteLine("Hello");
+    }
+    public class AChildClass
+    {
+
+    }
+}
