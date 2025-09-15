@@ -18,7 +18,7 @@ public class T08_StandardDelegates
     {
         Func<string> f1 = F3;
         Func<string, string> f2 = F4;
-        
+
     }
     public string F3() { return string.Empty; }
     public string F4(string s) { return s.ToUpper(); }
@@ -28,10 +28,10 @@ public class T08_StandardDelegates
     {
         Action<int> a1 = F1;
         Action<int, int> a2 = F2;
-        
+
     }
     public void F1(int a) { }
-    public void F2(int a,int b) { }
+    public void F2(int a, int b) { }
 
     //Lambda Functions
     public void TestLambdaFunctions()
@@ -45,5 +45,25 @@ public class T08_StandardDelegates
 
         Func<string, string> f1 = a => { return a.ToUpper(); };
         Func<string, string> f2 = a => a.ToUpper();
+        Func<int,int,int> f3 = (a,b) => { return a + b; };
+        Func<int,int,int> f4 = (a,b) => a + b;
+
+        Predicate<int> p1 = a => a > 10;
+        var result = p1(11);
+
+        Action<int> a = delegate (int a) { Console.WriteLine(a); };
+        Func<int, int, int> f = delegate (int a, int b) { return a + b; };
+        Predicate<int> p = delegate(int a) {  return a > 10; };
+    }
+
+    public void LambdaFunctionAsCallback()
+    {
+        Comparasion(1, 2, out bool result, (a, b) => a > b);
+        Comparasion(1, 2, out result, (a, b) => { return a > b; });
+    }
+
+    public void Comparasion(in int a, in int b, out bool result, Func<int,int,bool> predicate)
+    {
+        result = predicate.Invoke(a, b);
     }
 }

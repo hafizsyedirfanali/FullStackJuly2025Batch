@@ -20,6 +20,8 @@ public class T06_Delegates
         result = d1.Invoke(10, 30);//calling through delegate using invoke method
 
         result = AddAndPrint(10, 20, Print);
+        result = AddAndPrint(10, 20, s => Console.Write(s));
+        result = AddAndPrint(10, 20, Console.Write);
         TestMultiDelegate();
     }
     public int Add(int a, int b)
