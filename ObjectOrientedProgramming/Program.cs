@@ -1,4 +1,4 @@
 ﻿using ObjectOrientedProgramming;
 
-var obj = new T09_Inheritance();
+var obj = new T11_Polymorphism();
 obj.Test();
