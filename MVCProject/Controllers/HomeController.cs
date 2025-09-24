@@ -2,31 +2,39 @@ using Microsoft.AspNetCore.Mvc;
 using MVCProject.Models;
 using System.Diagnostics;
 
-namespace MVCProject.Controllers
+namespace MVCProject.Controllers;
+/// <summary>
+/// Dependency injection is a process of injecting the dependency in a class.
+/// </summary>
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    //private readonly PrintServices _print;
+    //public HomeController(PrintServices print)//dependency injection
+    //{
+      
+    //}
+
+    public IActionResult Index()//Index Action and not function
     {
-        private readonly ILogger<HomeController> _logger;
+        //_print.PrintInNewLine("hello");
+        return View();
+    }
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+    public IActionResult Privacy()
+    {
+        return View();
+    }
+    public IActionResult Contact()
+    {
+        return View();
+    }
+    public IActionResult About()
+    {
+        return View("Aboutt");
+    }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+    public IActionResult Error()
+    {
+        return Ok("");
     }
 }
