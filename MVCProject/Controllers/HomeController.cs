@@ -11,11 +11,16 @@ public class HomeController : Controller
     //private readonly PrintServices _print;
     //public HomeController(PrintServices print)//dependency injection
     //{
-      
-    //}
 
+    //}
+    //Routing = localhost/home/index
+    [Route("/home/index")]
+    // [Route("/home/myhome")]
+    [HttpGet]
     public IActionResult Index()//Index Action and not function
     {
+        ViewBag.Experience = 10;//Age Experience is added to page dictionary with value 10
+        ViewData["Name"] = "Irfan sir";
         //_print.PrintInNewLine("hello");
         return View();
     }
