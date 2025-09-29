@@ -37,7 +37,41 @@ public class HomeController : Controller
     {
         return View("Aboutt");
     }
+    public IActionResult TempData1()
+    {
+        TempData["Date"] = DateTime.Now;
+        return View();
+    }
+    public IActionResult TempData2()
+    {
+        return View();
+    }
+    public IActionResult TempData3()
+    {
+        return View();
+    }
+    [HttpGet]
+    public IActionResult ModelBinding()
+    {
+        //Model means class object.
+        //StudentModel model = new StudentModel();
+        //model.Address = "Nagpur";
+        //model.Age = 10;
+        //model.Name = "abid";
+        var model = new StudentModel
+        {
+            Address = "Nagpur",
+            Age = 10,
+            Name = "abid"
+        };
 
+        return View(model);
+    }
+    [HttpPost]
+    public IActionResult ModelBinding(StudentModel model)
+    {
+        return View(model);
+    }
     public IActionResult Error()
     {
         return Ok("");

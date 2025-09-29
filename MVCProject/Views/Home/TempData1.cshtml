@@ -1,0 +1,7 @@
+﻿@{
+    var date = @TempData["Date"];//marked for deletion after reading
+    TempData.Keep("Date");//Removes mark of deletion for specified key
+    TempData.Keep();//Removes mark of deletion for all keys
+}
+
+<h1>Date: @date</h1>

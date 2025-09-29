@@ -1,0 +1,39 @@
+﻿@model StudentModel
+
+<form method="post" asp-action="ModelBinding" asp-controller="Home">
+    <table>
+        <tr>
+            <td><label asp-for="Name"></label></td>
+            <td><input asp-for="Name" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Age"></label></td>
+            <td><input asp-for="Age" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Address"></label></td>
+            <td><input asp-for="Address" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<table class="table table-bordered">
+    <tr>
+        <td>Name</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>@Model.Age</td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td>@Model.Address</td>
+    </tr>
+</table>
+
