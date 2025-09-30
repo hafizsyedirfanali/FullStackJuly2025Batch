@@ -4,15 +4,36 @@
     <table>
         <tr>
             <td><label asp-for="Name"></label></td>
-            <td><input asp-for="Name" class="form-control" /></td>
+            <td>
+                <input asp-for="Name" class="form-control" />
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </td>
         </tr>
         <tr>
             <td><label asp-for="Age"></label></td>
-            <td><input asp-for="Age" class="form-control" /></td>
+            <td><input asp-for="Age" class="form-control" />
+                <span class="text-danger" asp-validation-for="Age"></span>
+            </td>
         </tr>
         <tr>
             <td><label asp-for="Address"></label></td>
-            <td><input asp-for="Address" class="form-control" /></td>
+            <td><input asp-for="Address" class="form-control" />
+                <span class="text-danger" asp-validation-for="Address"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email"></label></td>
+            <td>
+                <input asp-for="Email" class="form-control" />
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Password"></label></td>
+            <td>
+                <input asp-for="Password" class="form-control" />
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </td>
         </tr>
         <tr>
             <td></td>
@@ -22,18 +43,25 @@
         </tr>
     </table>
 </form>
-<table class="table table-bordered">
-    <tr>
-        <td>Name</td>
-        <td>@Model.Name</td>
-    </tr>
-    <tr>
-        <td>Age</td>
-        <td>@Model.Age</td>
-    </tr>
-    <tr>
-        <td>Address</td>
-        <td>@Model.Address</td>
-    </tr>
-</table>
 
+@if(Model is not null)
+{
+    <table class="table table-bordered">
+        <tr>
+            <td>Name</td>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>@Model.Age</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>@Model.Address</td>
+        </tr>
+    </table>
+}
+else
+{
+    <h1>No record found</h1>
+}

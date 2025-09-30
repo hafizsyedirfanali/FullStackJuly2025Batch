@@ -70,6 +70,11 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult ModelBinding(StudentModel model)
     {
+        if (ModelState.IsValid)//backend validation
+        {
+            //save incoming data, or process
+        }
+        //handle invalid data
         return View(model);
     }
     public IActionResult Error()
