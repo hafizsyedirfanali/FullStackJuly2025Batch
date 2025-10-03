@@ -1,0 +1,50 @@
+﻿@model List<StudentModel>
+
+@if (Model is not null)
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@Model[i].Name</td>
+                    <td>@Model[i].Age</td>
+                    <td>@Model[i].Address</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-danger">Null Reference Error</div>
+}
+
+<form method="post" asp-controller="Home" asp-action="ModelBindingList">
+    <table>
+        @for (int i = 0; i < 5; i++)
+        {
+            <tr>
+                <td>
+                    <input asp-for="@Model[i].Name" />
+                </td>
+                <td>
+                    <input asp-for="@Model[i].Age" />
+                </td>
+                <td>
+                    <input asp-for="@Model[i].Address" />
+                </td>
+            </tr>
+        }
+    </table>
+    <button type="submit">Submit</button>
+</form>
