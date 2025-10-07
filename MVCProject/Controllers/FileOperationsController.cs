@@ -33,5 +33,15 @@ namespace MVCProject.Controllers
             //return RedirectToAction("Index");
             return RedirectToAction(nameof(Index));
         }
+        [HttpPost]
+        public IActionResult DownloadFile(string fileName)
+        {
+            var folderPath = Path.Combine(webHostEnvironment.ContentRootPath, "wwwroot", "Uploads");
+            var filePath = Path.Combine(folderPath, fileName);
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath); // Replace with actual file path or data source
+            string mimeType = "application/pdf";
+
+            return File(fileBytes, mimeType, fileName);
+        }
     }
 }
