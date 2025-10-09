@@ -1,0 +1,14 @@
+Database:
+1. Tables: Data Structure with rows and columns
+Each table will have a primary key (Id) and required columns
+Eg. Student table can have columns like Id, Name, Age, Gender
+Two tables can be related to each other to form a relation.
+Types of relations. 
+	a) One To Many (Tree structure)
+	b) Many to Many (Mapping of two tables)
+	c) One to One (Extention of a table in another table)
+
+2. Stored Procedures
+	Methods/Behaviour that can take input parameters, perform operations and return some data
+3. Functions
+	Function can take input, perform operations and return some data
