@@ -9,5 +9,6 @@ namespace MSIdentity.Data.Entities
         [MaxLength(100)]
         public string Name { get; set; }
         public string? Description { get; set; }
+        public bool IsAction { get; set; }
     }
 }

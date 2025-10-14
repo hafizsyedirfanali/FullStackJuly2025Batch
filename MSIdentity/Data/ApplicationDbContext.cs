@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MSIdentity.Data.Entities;
+using WebApplication2.Data.Entities;
 
 namespace MSIdentity.Data
 {
@@ -11,5 +12,8 @@ namespace MSIdentity.Data
         {
         }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Magazine> Magazines { get; set; }
+        public DbSet<NewsPaper> NewsPapers { get; set; }
     }
 }
