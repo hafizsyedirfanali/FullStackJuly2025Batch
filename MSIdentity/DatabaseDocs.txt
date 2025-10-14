@@ -12,3 +12,7 @@ Types of relations.
 	Methods/Behaviour that can take input parameters, perform operations and return some data
 3. Functions
 	Function can take input, perform operations and return some data
+
+4. Database Operations are CRUD (Read & Create, Update, Delete)
+	a) Read - Only Gets Data and does not change the data.
+	b) Create, Update, Delete - Make changes in database
