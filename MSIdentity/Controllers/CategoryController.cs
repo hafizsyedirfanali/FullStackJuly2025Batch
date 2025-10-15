@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MSIdentity.Data;
 using MSIdentity.Data.Entities;
 using MSIdentity.Models;
@@ -6,6 +7,7 @@ using MSIdentity.Models;
 
 namespace MSIdentity.Controllers
 {
+    [Authorize]
     public class CategoryController(ApplicationDbContext dbContext) : Controller
     {
 
@@ -29,6 +31,7 @@ namespace MSIdentity.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category model)
         {
+            
             if (ModelState.IsValid)
             {
                 //Add in database
@@ -42,6 +45,10 @@ namespace MSIdentity.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
+            if(id == 0)
+            {
+                return View("Error", new ErrorViewModel { ErrorMessage = "ID not received" });
+            }
             //Get record of id from database in a model
             //var model = database....
             var model = dbContext.Categories.Find(id);//use when finding using PK

@@ -1,0 +1,21 @@
+﻿
+@model Category
+<div class="container">
+    <div class="row ">  
+        <h1 class="text-center">Add Cetegory</h1>
+        <form method="post" asp-action="Create" asp-controller="Category">
+        <label class="m-2 text-black fw-bold">Category Name</label>
+        <input type="text" class="form-control" asp-for="Name"/>
+        <label class="m-2 text-black fw-bold">Category Description</label>
+        <input type="text" class="form-control" asp-for="Description" />
+            <label class="m-2 text-black fw-bold">
+                <input type="checkbox" asp-for="IsAction" />Status
+            </label>
+        
+        <div class="text-center">
+            <button type="submit" class="btn btn-success mt-2 " style="width:200px">Add</button>
+                <a class="btn btn-success mt-2 " asp-action="Categories">Back</a>
+        </div>
+      </form>
+        </div>
+</div>
