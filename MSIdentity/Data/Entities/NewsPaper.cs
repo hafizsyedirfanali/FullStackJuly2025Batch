@@ -1,7 +1,7 @@
 ﻿using MSIdentity.Data.Entities;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication2.Data.Entities
+namespace MSIdentity.Data.Entities
 {
     public class NewsPaper
     {
@@ -11,7 +11,7 @@ namespace WebApplication2.Data.Entities
         public string Name { get; set; }
         public string? Description { get; set; }
         public Boolean IsActive { get; set; }
-        public Category Category { get; set; }//Navigation property
+        public Category? Category { get; set; }//Navigation property
         public int CategoryId { get; set; }
     }
 }

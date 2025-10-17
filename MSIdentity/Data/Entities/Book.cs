@@ -1,18 +1,16 @@
-﻿using MSIdentity.Data.Entities;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication2.Data.Entities
+namespace MSIdentity.Data.Entities
 {
-    public class Book
+    public class Book //child table
     {
         [Key]
         public int Id { get; set; }
-       [MaxLength(100)]
+        [MaxLength(100)]
         public String Title { get; set; }
-         public String? Description { get; set; }
+        public String? Description { get; set; }
         public Boolean IsActive { get; set; }
         public Category Category { get; set; }//Navigation property
-        public int CategoryId { get; set; }
+        public int CategoryId { get; set; }//parent table id
     }
 }

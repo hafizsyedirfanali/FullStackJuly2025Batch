@@ -7,7 +7,7 @@ using MSIdentity.Models;
 
 namespace MSIdentity.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class CategoryController(ApplicationDbContext dbContext) : Controller
     {
 

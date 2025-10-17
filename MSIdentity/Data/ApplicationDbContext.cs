@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MSIdentity.Data.Entities;
-using WebApplication2.Data.Entities;
 
 namespace MSIdentity.Data
 {

@@ -1,0 +1,24 @@
+﻿@model Book
+@{
+    var categoryId= (int)ViewBag.CategoryId;
+}
+<div class="container">
+    <div class="row ">  
+        <form method="post" asp-action="Update" asp-controller="Book">
+            <input asp-for="Id" hidden />
+            <input asp-for="CategoryId" hidden />
+        <label class="m-2 text-black fw-bold">Book Title</label>
+        <input type="text" class="form-control" asp-for="Title"/>
+        <label class="m-2 text-black fw-bold">Category Description</label>
+        <input type="text" class="form-control" asp-for="Description" />
+            <label class="m-2 text-black fw-bold">
+                <input type="checkbox" asp-for="IsActive" />Status
+            </label>
+        
+        <div class="text-center">
+            <button type="submit" class="btn btn-success mt-2 " style="width:200px">Save Changes</button>
+                <a class="btn btn-success mt-2 " asp-action="Books"  asp-route-categoryId="@categoryId">Back</a>
+        </div>
+      </form>
+        </div>
+</div>
