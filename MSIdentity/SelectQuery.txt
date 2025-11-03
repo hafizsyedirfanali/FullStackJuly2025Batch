@@ -1,0 +1,40 @@
+--this is a comment
+--CRUD (Read, Create, Update, Delete)
+--READ Operation (Select)
+--Get All records and all columns
+select * from Categories
+--Get All Records and Selected columns
+select Id,Name from Categories
+select Name,Id from Categories
+--Get All records and all columns and in asc order
+select * from Categories order by Id asc
+--Get All records and all columns and in desc order
+select * from Categories order by Id 
+--Get count of records
+select count(Id) as Records from Categories
+--Get All Records and Selected columns with custom name
+select Id as CategoryId,Name as CategoryName from Categories
+--Filtering Records using where 
+select * from Categories where Id = 7
+select * from Categories where Name = 'Book' 
+--Filter record that contains o in description
+select * from Categories where Description like '%o%' --wildcard
+--Filter record that contains o after one characters in description col
+select * from Categories where Description like '_o%'
+
+
+
+--Declare a variable age of int type
+declare @age int
+--declare a variable name of type varchar
+declare @name varchar(10)
+set @age = 10
+set @name = 'Irfan'
+if(@age > 9)
+begin
+	select @age as AGE
+end
+else
+begin
+	select @name as Name
+end
