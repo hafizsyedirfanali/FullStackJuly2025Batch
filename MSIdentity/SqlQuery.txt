@@ -1,0 +1,39 @@
+--CRUD
+
+--Inserting Record
+insert into Categories (IsAction, Name,Description) 
+values (1,'Journal2', 'Journal2')
+
+insert into Categories 
+values ('Journal1', 'Journal1',1)
+
+--Update (Danger is where is not used)
+update Categories set Name = 'NewComics', Description = 'NewComics' where Id = 1007
+
+--Delete (Danger is where is not used)
+delete from Categories where Id = 1001
+select * from Categories
+
+alter procedure spAddition @a int, @b int
+as
+begin 
+	declare @sum int
+	set @sum = @a + @b
+	print @sum
+	select @sum as sum
+end
+
+--executing procedure
+exec spAddition 10,11
+
+--SQL Functions
+CREATE FUNCTION AddThreeNumbers (@num1 INT, @num2 INT, @num3 INT)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @sum INT;
+    SET @sum = @num1 + @num2 + @num3;
+    RETURN @sum;
+END;
+
+SELECT dbo.AddThreeNumbers(10, 20, 30) AS TotalSum;
