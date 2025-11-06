@@ -140,4 +140,12 @@ public class CategoryApiController(ApplicationDbContext dbContext, ILogger<Categ
         }
         return BadRequest("Failed to delete record. Record not found");
     }
+    [Authorize]
+    [HttpPost]
+    [Route("Add/{a:int}/{b:int}")]
+    public IActionResult Add([FromRoute] int a, [FromRoute] int b)
+    {
+        var result = a + b;
+        return Ok(result);
+    }
 }
