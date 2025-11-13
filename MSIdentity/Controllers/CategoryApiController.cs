@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MSIdentity.Data;
 using MSIdentity.Data.Entities;
 using MSIdentity.Models;
+using Newtonsoft.Json;
 
 
 namespace MSIdentity.Controllers;
@@ -91,7 +92,7 @@ public class CategoryApiController(ApplicationDbContext dbContext, ILogger<Categ
 
     [Route("Update")]
     [HttpPost]
-    public IActionResult Update(Category model)
+    public IActionResult Update([FromBody] Category model)
     {
         if (ModelState.IsValid)
         {
@@ -148,4 +149,44 @@ public class CategoryApiController(ApplicationDbContext dbContext, ILogger<Categ
         var result = a + b;
         return Ok(result);
     }
+    //From Query
+    [Route("Method1")]
+    [HttpPost]
+    public IActionResult Method1([FromQuery] int a, [FromQuery] int b)
+    {
+        var result = a + b;
+        return Ok(result);
+    }
+    //From Route
+    [Route("Method2/a/{a:int}/b/{b:int}")]
+    [HttpPost]
+    public IActionResult Method2([FromRoute] int a, [FromRoute] int b)
+    {
+        var result = a + b;
+        return Ok(result);
+    }
+    //From Body
+    [Route("Method3")]
+    [HttpPost]
+    public IActionResult Method3([FromBody] Method3Class obj)
+    {
+        var result = obj.A + obj.B;
+        return Ok(result);
+    }
+    //From Header
+    [Route("Method4")]
+    [HttpPost]
+    public IActionResult Method4([FromHeader] int a, [FromHeader] int b)
+    {
+        var result = a + b;
+        return Ok(result);
+    }
 }
+public class Method3Class
+{
+    public int A { get; set; }
+    public int B { get; set; }
+}
+//Parameters are passed using query or route
+//configuration information is passed using headers
+//Data is passed using body
