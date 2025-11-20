@@ -21,8 +21,8 @@ public class CategoryApiController(ApplicationDbContext dbContext, ILogger<Categ
         try
         {
             var list = dbContext.Categories.ToList();//Gives IQuerable type of list
-            //return Ok(list);
-            return StatusCode(StatusCodes.Status404NotFound, list);
+            return Ok(list);
+            //return StatusCode(StatusCodes.Status404NotFound, list);
         }
         catch (Exception ex)
         {

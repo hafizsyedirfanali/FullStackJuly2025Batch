@@ -1,24 +1,32 @@
 <!-- Hero Section -->
 <section style="text-align: center; padding: 60px 20px; background: #f8fafc;">
     <h1>Welcome to My Angular Project 👋</h1>
-    <p>This is a simple homepage created for practice.</p>
-    <button style="padding: 10px 20px; background: #ffc107; color: black; border: none; border-radius: 6px;">
-        Learn More
-    </button>
 </section>
-
+<section style="text-align: center; padding: 20px;">
+    
+</section>
 <!-- Cards Section -->
 <section style="padding: 40px; display: flex; gap: 20px; justify-content: center;">
-    <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; width: 250px; text-align: center;">
-        <h3>Feature 1</h3>
-        <p>Basic info about this feature.</p>
-    </div>
-    <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; width: 250px; text-align: center;">
-        <h3>Feature 2</h3>
-        <p>Another feature description.</p>
-    </div>
-    <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; width: 250px; text-align: center;">
-        <h3>Feature 3</h3>
-        <p>Something useful about this feature.</p>
-    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Is Active</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.isAction ? 'Yes' : 'No' }}</td>
+                <td>
+                    <!-- <button (click)="editItem(item.id)">Edit</button> -->
+                    <button (click)="deleteItem(item.id)">Delete</button>
+                </td>
+            </tr>
+    </table>
 </section>
