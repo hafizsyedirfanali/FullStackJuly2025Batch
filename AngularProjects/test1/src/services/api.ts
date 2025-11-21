@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class Api {
-  endpointUrl:string = 'https://localhost:7084/api/CategoryApi/Categories';
+  endpointUrl:string = 'http://localhost:5000/api/CategoryApi';
   //c# 
   //int a = 10;
   //ts
@@ -18,6 +18,6 @@ export class Api {
 
   // }
   getCategories():Observable<any>{
-    return this.httpClient.get<any>(`${this.endpointUrl}`);
+    return this.httpClient.get<any>(`${this.endpointUrl}/Categories`);
   }
 }
