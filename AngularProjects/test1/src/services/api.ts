@@ -24,4 +24,7 @@ export class Api {
   deleteCategory(id: number): Observable<void> {
     return this.httpClient.post<void>(`${this.endpointUrl}/delete/${id}`, {});
   }
+  addCategory(payload: Category): Observable<Category> {
+    return this.httpClient.post<Category>(`${this.endpointUrl}/Create`, payload);
+  }
 }

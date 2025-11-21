@@ -4,10 +4,40 @@
 </section>
 <section style="text-align: center; padding: 20px">
     <div class="d-flex justify-content-end">
-        <button class="btn btn-info">Add Category</button>
+        <button class="btn btn-info" (click)="isAdding = true">Add Category</button>
     </div>
+
+    @if(isAdding){
     <div class="container mt-4">
         <h4>Add Category</h4>
+        <form [formGroup]="addForm" class="row g-3 align-items-center" (ngSubmit)="addCategory()">
+            <div class="col-auto">
+                <input type="text" class="form-control" id="categoryName" formControlName="name" placeholder="Name" />
+            </div>
+
+            <div class="col-auto">
+                <input type="text" class="form-control" id="categoryDescription" formControlName="description" placeholder="Description" />
+            </div>
+
+            <div class="col-auto mt-4">
+                <input type="checkbox" class="form-check-input" formControlName="isAction" id="isActive" />
+                <label class="form-check-label ms-1" for="isActive">Active</label>
+            </div>
+
+            <div class="col-auto mt-4">
+                <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Add</button>
+                <button type="button" class="btn btn-secondary ms-2" (click)="isAdding = false">Cancel</button>
+            </div>
+        </form>
+    </div>
+    }
+
+
+</section>
+@if(isEditing){
+<section style="text-align: center; padding: 20px">
+    <div class="container mt-4">
+        <h4>Edit Category</h4>
 
         <form class="row g-3 align-items-center">
             <div class="col-auto">
@@ -29,10 +59,13 @@
 
             <div class="col-auto mt-4">
                 <button type="submit" class="btn btn-primary">Add</button>
+                <button type="button" class="btn btn-secondary ms-2" (click)="isEditing = false">Cancel</button>
             </div>
         </form>
     </div>
 </section>
+}
+
 <!-- Cards Section -->
 <section style="padding: 40px; display: flex; gap: 20px; justify-content: center">
     <table class="table table-bordered">

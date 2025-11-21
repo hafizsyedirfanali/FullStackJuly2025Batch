@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Api } from '../../services/api';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 export interface Category {
   id: number;
   name: string;
@@ -9,17 +10,37 @@ export interface Category {
 }
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule,ReactiveFormsModule, FormsModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home implements OnInit {
   items:Category[] = [];
-
-  constructor(private apiService:Api, private cdr: ChangeDetectorRef){
+  isAdding:boolean = false;
+  isEditing:boolean = false;
+  addForm!: FormGroup;
+  editForm!: FormGroup;
+  constructor(private apiService:Api,
+      private fb: FormBuilder,
+     private cdr: ChangeDetectorRef){
 
   }
   ngOnInit(): void {
+  this.addForm = this.fb.group({
+        name: ['', Validators.required],
+        description: ['', [Validators.required, Validators.maxLength(100)]],
+        isAction: [false, Validators.required],
+        //studentType: ['', [Validators.required, Validators.pattern('R|E|O')]],
+      });
+      this.editForm = this.fb.group({
+        id: ['',Validators.required],
+        name: ['', Validators.required],
+        description: ['', [Validators.required, Validators.maxLength(100)]],
+        isAction: [false, Validators.required],
+        //studentType: ['', [Validators.required, Validators.pattern('R|E|O')]],
+      });
+
+
     this.apiService.getCategories().subscribe({
       next: (response:Category[])=>{
         this.items = [...response]; //spread operator
@@ -29,6 +50,23 @@ export class Home implements OnInit {
         console.error(err)
       }
     });
+  }
+
+  addCategory():void{
+    const payload = this.addForm.value;
+    this.apiService.addCategory(payload).subscribe({
+      next: (newCategory:Category)=>{
+        this.items.push(newCategory);
+        this.isAdding = false;
+        this.addForm.reset();
+        this.cdr.detectChanges();
+      }
+      ,
+      error: (err)=>{
+        console.error(err);
+      }
+    });
+    
   }
 
   deleteItem(id:number):void{
