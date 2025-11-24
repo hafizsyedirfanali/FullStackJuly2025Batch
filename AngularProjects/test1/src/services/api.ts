@@ -27,4 +27,10 @@ export class Api {
   addCategory(payload: Category): Observable<Category> {
     return this.httpClient.post<Category>(`${this.endpointUrl}/Create`, payload);
   }
+  getCategoryById(id: number): Observable<Category> {
+    return this.httpClient.get<Category>(`${this.endpointUrl}/GetById/${id}`);
+  }
+  // updateCategory(payload: Category, id: number): Observable<Category> {
+  //   retrun this.httpClient.post<Category>(`${this.endpointUrl}//${id}`, payload);
+  // }
 }
