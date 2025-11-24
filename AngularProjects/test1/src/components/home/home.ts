@@ -66,7 +66,39 @@ export class Home implements OnInit {
         console.error(err);
       }
     });
-    
+  }
+
+  updateCategory():void{
+    const payload = this.editForm.value;
+    this.apiService.updateCategory(payload).subscribe({
+      next: (updatedCategory:Category)=>{
+        const index = this.items.findIndex(item => item.id === updatedCategory.id);
+        if(index !== -1){
+          this.items[index] = updatedCategory;
+        }
+        this.isEditing = false;
+        this.editForm.reset();
+        this.cdr.detectChanges();
+      },
+      error: (err)=>{
+        console.error(err);
+      }
+    });
+  } 
+
+
+
+  editItem(id:number):void{
+    this.isEditing = true;
+    const item = this.items.find(i => i.id === id);
+    if(item){
+      this.editForm.setValue({
+        id: item.id,
+        name: item.name,
+        description: item.description,
+        isAction: item.isAction
+      });
+    }
   }
 
   deleteItem(id:number):void{

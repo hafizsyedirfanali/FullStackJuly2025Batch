@@ -39,26 +39,26 @@
     <div class="container mt-4">
         <h4>Edit Category</h4>
 
-        <form class="row g-3 align-items-center">
+        <form class="row g-3 align-items-center" [formGroup]="editForm" (ngSubmit)="updateCategory()">
             <div class="col-auto">
-                <input type="text" class="form-control" id="categoryId" placeholder="ID" />
+                <input type="text" class="form-control" formControlName="id" placeholder="ID" />
             </div>
 
             <div class="col-auto">
-                <input type="text" class="form-control" id="categoryName" placeholder="Name" />
+                <input type="text" class="form-control" formControlName="name" placeholder="Name" />
             </div>
 
             <div class="col-auto">
-                <input type="text" class="form-control" id="categoryDescription" placeholder="Description" />
+                <input type="text" class="form-control" formControlName="description"  placeholder="Description" />
             </div>
 
             <div class="col-auto mt-4">
-                <input type="checkbox" class="form-check-input" id="isActive" />
+                <input type="checkbox" class="form-check-input" formControlName="isAction" />
                 <label class="form-check-label ms-1" for="isActive">Active</label>
             </div>
 
             <div class="col-auto mt-4">
-                <button type="submit" class="btn btn-primary">Add</button>
+                <button type="submit" class="btn btn-primary">Update</button>
                 <button type="button" class="btn btn-secondary ms-2" (click)="isEditing = false">Cancel</button>
             </div>
         </form>
@@ -85,7 +85,7 @@
                 <td>{{ item.description }}</td>
                 <td>{{ item.isAction ? 'Yes' : 'No' }}</td>
                 <td>
-                    <!-- <button (click)="editItem(item.id)">Edit</button> -->
+                    <button (click)="editItem(item.id)">Edit</button>
                     <button (click)="deleteItem(item.id)">Delete</button>
                 </td>
             </tr>

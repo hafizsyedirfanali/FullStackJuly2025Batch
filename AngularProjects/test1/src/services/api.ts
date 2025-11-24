@@ -27,4 +27,7 @@ export class Api {
   addCategory(payload: Category): Observable<Category> {
     return this.httpClient.post<Category>(`${this.endpointUrl}/Create`, payload);
   }
+  updateCategory(payload: Category): Observable<Category> {
+    return this.httpClient.post<Category>(`${this.endpointUrl}/Update`, payload);
+  }
 }
