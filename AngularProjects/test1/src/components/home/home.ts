@@ -10,59 +10,59 @@ export interface Category {
 }
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home implements OnInit {
-  items:Category[] = [];
-  isAdding:boolean = false;
-  isEditing:boolean = false;
+  items: Category[] = [];
+  isAdding: boolean = false;
+  isEditing: boolean = false;
   addForm!: FormGroup;
   editForm!: FormGroup;
-  constructor(private apiService:Api,
-      private fb: FormBuilder,
-     private cdr: ChangeDetectorRef){
+  constructor(private apiService: Api,
+    private fb: FormBuilder,
+    private cdr: ChangeDetectorRef) {
 
   }
   ngOnInit(): void {
-  this.addForm = this.fb.group({
-        name: ['', Validators.required],
-        description: ['', [Validators.required, Validators.maxLength(100)]],
-        isAction: [false, Validators.required],
-        //studentType: ['', [Validators.required, Validators.pattern('R|E|O')]],
-      });
-      this.editForm = this.fb.group({
-        id: ['',Validators.required],
-        name: ['', Validators.required],
-        description: ['', [Validators.required, Validators.maxLength(100)]],
-        isAction: [false, Validators.required],
-        //studentType: ['', [Validators.required, Validators.pattern('R|E|O')]],
-      });
+    this.addForm = this.fb.group({
+      name: ['', Validators.required],
+      description: ['', [Validators.required, Validators.maxLength(100)]],
+      isAction: [false, Validators.required],
+      //studentType: ['', [Validators.required, Validators.pattern('R|E|O')]],
+    });
+    this.editForm = this.fb.group({
+      id: ['', Validators.required],
+      name: ['', Validators.required],
+      description: ['', [Validators.required, Validators.maxLength(100)]],
+      isAction: [false, Validators.required],
+      //studentType: ['', [Validators.required, Validators.pattern('R|E|O')]],
+    });
 
 
     this.apiService.getCategories().subscribe({
-      next: (response:Category[])=>{
+      next: (response: Category[]) => {
         this.items = [...response]; //spread operator
         this.cdr.detectChanges();
       },
-      error: (err)=>{
+      error: (err) => {
         console.error(err)
       }
     });
   }
 
-  addCategory():void{
+  addCategory(): void {
     const payload = this.addForm.value;
     this.apiService.addCategory(payload).subscribe({
-      next: (newCategory:Category)=>{
+      next: (newCategory: Category) => {
         this.items.push(newCategory);
         this.isAdding = false;
         this.addForm.reset();
         this.cdr.detectChanges();
       }
       ,
-      error: (err)=>{
+      error: (err) => {
         console.error(err);
       }
     });
@@ -101,15 +101,27 @@ export class Home implements OnInit {
     }
   }
 
-  deleteItem(id:number):void{
+  deleteItem(id: number): void {
     this.apiService.deleteCategory(id).subscribe({
-      next: ()=>{
+      next: () => {
         this.items = this.items.filter(item => item.id !== id);
         this.cdr.detectChanges();
       },
-      error: (err)=>{
+      error: (err) => {
         console.error(err);
       }
     });
   }
+  // getItemById(id: number): void {
+  //   this.apiService.getCategoryById(id).subscribe({
+  //     next: (response: Category) => {
+  //       this.items = [response]; //spread operator
+  //       this.cdr.detectChanges();
+  //     },
+  //     error: (err) => {
+  //       console.error(err)
+  //     }
+  //   });
+  // }
+  updateItem(id: number): void { }
 }
